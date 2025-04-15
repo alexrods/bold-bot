@@ -46,7 +46,7 @@ def image_request_agent(message, user_id):
 
     # Verificar si aún hay imágenes pendientes en la sesión
     if not session["pending"]:
-        send_text_message(user_id, "Ya hemos recibido todas las imágenes solicitadas. Muchas gracias.")
+        send_text_message(user_id, "Gracias, un especialista evaluara tu caso y nos pondremos en contacto contigo.")
         # Marcar la sesión como completada para evitar reinicios futuros.
         completed_image_sessions[user_id] = session["collected"]
         del image_request_sessions[user_id]
@@ -67,7 +67,7 @@ def image_request_agent(message, user_id):
             send_text_message(user_id, f"Por favor, envía la foto de: {next_label}.")
             logger.info(f"Requested image for {next_label} from user {user_id}")
         else:
-            send_text_message(user_id, "Gracias, hemos recibido todas las imágenes requeridas para tu valoración.")
+            send_text_message(user_id, "Gracias, un especialista evaluara tu caso y nos pondremos en contacto contigo.")
             logger.info(f"Image request session completed for user {user_id}")
             # Marcar la sesión como completada para evitar volver a pedir imágenes
             completed_image_sessions[user_id] = session["collected"]

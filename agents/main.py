@@ -79,7 +79,7 @@ def react_agent(user_input, conversation_history=None):
 
     # 6. Si se detectó la intención de valoración, añadir un mensaje complementario para enviar la imagen de ejemplo
     if send_image:
-        agent_response += "\n\nAdjunto encontrarás una imagen con las instrucciones para realizar tu valoración vía WhatsApp."
+        agent_response += "\n\nEnvianos una serie de fotografias como las del siguiente ejemplo para valorar tu caso personal."
 
     return {
         "success": True,
