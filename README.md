@@ -13,8 +13,8 @@ Este proyecto implementa un agente conversacional basado en el paradigma ReACT (
 
 - **Python:** Lenguaje principal de programación.
 - **FastAPI:** Framework web para construir la API y el webhook.
-- **OpenAI API:** Para la generación de respuestas del agente.
-- **Saptiva API:** (Posiblemente otra API de IA, basada en `get_responses.py`).
+- **OpenAI API:** Para la generación de respuestas del agente modelos de OpenAI.
+- **Saptiva API:** Para la generación de respuestas del agente modelos de Saptiva.
 - **python-dotenv:** Para gestionar variables de entorno.
 
 ## Estructura del Proyecto
@@ -75,5 +75,6 @@ uvicorn app:app --reload --port 8000
 ```
 
 La API estará disponible en `http://localhost:8000`.
+
 
 Necesitarás configurar un webhook en la plataforma de desarrolladores de Meta (WhatsApp Business API) que apunte a la URL pública de tu servidor donde se ejecuta esta aplicación (por ejemplo, usando ngrok durante el desarrollo) en la ruta `/webhook`. Asegúrate de usar el mismo `WEBHOOK_TOKEN` que definiste en tu archivo `.env`.
